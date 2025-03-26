@@ -1,0 +1,108 @@
+.navbar {
+    padding: 20px 0px; /* Adds vertical padding for spacing */
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Aligns items on opposite sides */
+    align-items: center; /* Vertically centers the items */
+}
+
+.navbar.logo {
+    width: 150px; /* Sets the logo width */
+}
+
+.navbar-menu {
+    display: flex; /* Flexbox for horizontal menu items */
+    list-style: none; /* Removes default list styling */
+    gap: 20px; /* Adds space between menu items */
+    color: #49557e; /* Text color */
+    font-size: 18px; /* Font size for menu items */
+}
+
+.navbar-right {
+    display: flex; /* Flexbox for the right side items (search, cart, button) */
+    align-items: center; /* Vertically centers the items */
+    gap: 40px; /* Space between elements */
+}
+
+.navbar button {
+    background: transparent; /* Transparent background for the button */
+    color: #49557e; /* Button text color */
+    border: 1px solid tomato; /* Red border for the button */
+    padding: 10px 30px; /* Padding inside the button */
+    border-radius: 50px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.3s; /* Smooth transition effect */
+}
+
+.navbar button:hover {
+    background-color: #fff4f2; /* Light red background on hover */
+}
+
+.navbar .active {
+    padding-bottom: 2px; /* Adds bottom padding to active link */
+    border-bottom: 2px solid #49557e; /* Underlines the active menu item */
+}
+
+.navbar li {
+    cursor: pointer; /* Pointer cursor for clickable list items */
+}
+
+.navbar-search-icon {
+    position: relative; /* Needed for positioning the notification dot */
+}
+
+.navbar-search-icon .dot {
+    position: absolute; /* Absolutely positioned dot */
+    min-width: 10px; /* Minimum width */
+    min-height: 10px; /* Minimum height */
+    background-color: tomato; /* Red color for notification dot */
+    border-radius: 5px; /* Circular shape */
+    top: -8px; /* Positioned above the icon */
+    right: -8px; /* Positioned to the right of the icon */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1050px) {
+    .navbar.logo {
+        width: 140px; /* Reduces logo size on smaller screens */
+    }
+    .navbar-menu {
+        gap: 20px; /* Reduces gap between menu items */
+        font-size: 17px; /* Reduces font size */
+    }
+    .navbar-right {
+        gap: 30px; /* Reduces space between items */
+    }
+    .navbar-right img {
+        width: 22px; /* Reduces icon size */
+    }
+    .navbar-right button {
+        padding: 8px 25px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar.logo {
+        width: 140px; /* Keeps the logo size consistent */
+    }
+    .navbar-menu {
+        gap: 15px; /* Reduces the gap between items */
+        font-size: 16px; /* Decreases font size */
+    }
+    .navbar-right {
+        gap: 20px; /* Reduces space between items */
+    }
+    .navbar-right img {
+        width: 20px; /* Decreases icon size */
+    }
+    .navbar-right button {
+        padding: 7px 20px; /* Reduces button padding */
+        font-size: 15px; /* Adjusts button text size */
+    }
+}
+
+/* Hides the navbar menu on very small screens */
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none; /* Hides the menu items on screens smaller than 750px */
+    }
+}

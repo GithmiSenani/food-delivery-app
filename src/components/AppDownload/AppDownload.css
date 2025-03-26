@@ -1,0 +1,25 @@
+.app-download {
+    margin: auto auto; /* Centers the section horizontally */
+    margin-top: 100px; /* Adds space above the section */
+    font-size: max(3vw, 20px); /* Responsive font size: at least 20px or 3% of viewport width */
+    text-align: center; /* Centers text content */
+    font-weight: 500; /* Medium font weight */
+}
+
+.app-download-platforms {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers images horizontally */
+    gap: max(2vw, 10px); /* Adds responsive spacing between images */
+    margin-top: 40px; /* Adds space between text and store icons */
+}
+
+.app-download-platforms img {
+    width: max(30vw, 120px); /* Ensures images scale with viewport but stay at least 120px */
+    max-width: 180px; /* Limits maximum image width to 180px */
+    transition: 0.5s; /* Smooth transition effect */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.05); /* Slightly enlarges images on hover for a subtle effect */
+}

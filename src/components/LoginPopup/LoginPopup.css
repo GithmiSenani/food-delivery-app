@@ -1,0 +1,85 @@
+/* Popup background overlay */
+.login-popup {
+    position: absolute; /* Positioning the popup absolutely */
+    z-index: 1; /* Ensures the popup is above other content */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: #00000090; /* Semi-transparent black background */
+    display: grid; /* Uses grid to center the popup */
+}
+
+/* Container for the login form */
+.login-popup-container {
+    place-self: center; /* Centers the form container */
+    width: max(23vw, 330px); /* Responsive width: 23% of the viewport width or 330px */
+    color: #808080; /* Text color for the form */
+    background-color: white; /* White background for the form */
+    display: flex; /* Flexbox for arranging elements inside */
+    flex-direction: column; /* Arrange children vertically */
+    gap: 25px; /* Spacing between the elements */
+    padding: 25px 30px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners for the form */
+    font-size: 14px; /* Font size for text */
+    animation: fadeIn 0.5s; /* Fade-in animation */
+}
+
+/* Title section of the login popup */
+.login-popup-title {
+    display: flex; /* Flexbox layout for title and close icon */
+    justify-content: space-between; /* Space out the elements */
+    align-items: center; /* Vertically center the elements */
+    color: black; /* Title color */
+}
+
+/* Close icon inside the title */
+.login-popup-title img {
+    width: 16px; /* Size of the close icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Section containing form inputs */
+.login-popup-inputs {
+    display: flex; /* Flexbox layout for inputs */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 20px; /* Spacing between inputs */
+}
+
+/* Styling for input fields */
+.login-popup-inputs input {
+    outline: none; /* Removes the default outline */
+    border: 1px solid #c9c9c9; /* Light grey border */
+    padding: 10px; /* Padding inside the input */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+/* Button styles for login/signup action */
+.login-popup-container button {
+    border: none; /* Removes border */
+    padding: 10px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* White text color */
+    background-color: tomato; /* Tomato-colored background */
+    font-size: 15px; /* Font size for the button text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Section containing the checkbox and terms of use text */
+.login-popup-condition {
+    display: flex; /* Flexbox for aligning checkbox and text */
+    align-items: start; /* Align the checkbox to the top */
+    gap: 8px; /* Space between checkbox and text */
+    margin-top: -15px; /* Negative margin to align with inputs */
+}
+
+/* Styling for the checkbox */
+.login-popup-condition input {
+    margin-top: 5px; /* Adjust vertical alignment */
+}
+
+/* Styling for links inside the form */
+.login-popup p span {
+    color: tomato; /* Tomato-colored links */
+    font-weight: 500; /* Bold links */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+

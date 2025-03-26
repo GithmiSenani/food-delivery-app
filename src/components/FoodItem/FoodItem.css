@@ -1,0 +1,77 @@
+.food-item{
+    width: 100%; /* Makes the food item take full width of the container */
+    margin: auto; /* Centers the element */
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s; /* Smooth transition effect */
+    animation: fadeIn 1s; /* Fade-in effect */
+}
+
+.food-item-image{
+    width: 100%; /* Ensures the image takes full width */
+    border-radius: 15px 15px 0px 0px; /* Rounds only the top corners */
+}
+
+.food-item-info {
+    padding: 30px; /* Adds padding inside the container for spacing */
+}
+
+.food-item-name-rating {
+    display: flex; /* Applies flexbox layout */
+    justify-content: space-between; /* Space out the name and rating */
+    align-items: center; /* Aligns items vertically to the center */
+    margin-bottom: 10px; /* Adds space between name-rating and the next content */
+}
+
+.food-item-name-rating p {
+    font-size: 20px; /* Sets the font size to 20px */
+    font-weight: 500; /* Sets font weight to 500 for a medium bold text */
+}
+
+.food-item-name-rating img {
+    width: 70px; /* Sets the width of the rating image to 70px */
+}
+
+/* Description text styling */
+.food-item-desc{
+    color: #676767;  /* Sets a muted gray color for the description text */
+    font-size: 12px;  /* Smaller font size for description */
+}
+
+/* Price text styling */
+.food-item-price{
+    color: tomato;  /* Uses tomato color to make the price stand out */
+    font-size: 22px;  /* Larger font size to emphasize the price */
+    font-weight: 500;  /* Medium weight for clarity and emphasis */
+    margin: 10px 0px;  /* Adds vertical spacing around the price */
+}
+
+.food-item-img-container{
+    position: relative; /* Makes the container the reference point for positioning child elements */
+}
+
+.food-item-img-container .add{
+    width: 35px; /* Sets the width of the add icon */
+    position: absolute; /* Positions the icon relative to the parent container */
+    bottom: 15px; /* Positions the icon 15px from the bottom */
+    right: 15px; /* Positions the icon 15px from the right */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border-radius: 50%; /* Makes the add icon circular */
+}
+
+.food-item-counter{
+    position: absolute; /* Positions the counter relative to the parent container */
+    bottom: 15px; /* Positions the counter 15px from the bottom */
+    right: 15px; /* Positions the counter 15px from the right */
+    display: flex; /* Enables flexbox layout for the counter */
+    align-items: center; /* Vertically centers the counter items */
+    gap: 10px; /* Adds space between the counter elements */
+    padding: 6px; /* Adds padding inside the counter */
+    border-radius: 50px; /* Rounds the corners of the counter container */
+    background-color: white; /* Sets the background color to white */
+}
+
+.food-item-counter img{
+    width: 30px;
+
+}
