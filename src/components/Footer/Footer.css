@@ -35,11 +35,17 @@
     color: white; /* Ensuring headers stand out */
 }
 
-.footer-social-icons img{
+.footer-social-icons img {
     width: 40px; /* Standard icon size */
     margin-right: 15px; /* Space between social icons */
     cursor: pointer;
-}
+    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+  }
+  
+  .footer-social-icons img:hover {
+    transform: scale(1.05); /* Slightly enlarges images on hover */
+  }
+  
 
 .footer hr{
     width: 100%; /* Full width */
@@ -48,6 +54,7 @@
     background-color: grey; /* HR color */
     border: none; /* Remove default border */
 }
+
 
 @media (max-width:750px) {
     /* Adjusts footer content layout for smaller screens */
