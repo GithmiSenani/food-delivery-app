@@ -42,6 +42,7 @@
     background-color: white; /* White background */
     font-size: max(1vw, 13px); /* Scalable font size with a minimum value */
     border-radius: 50px; /* Rounded button edges */
+    cursor: pointer; /* 👈 This makes the hand cursor appear on hover */
 }
 
 /* Media query for larger screens (below 1050px width) */
