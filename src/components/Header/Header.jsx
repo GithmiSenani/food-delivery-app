@@ -3,12 +3,15 @@ import './Header.css'
 
 const Header = () => {
 
+  // Function to scroll smoothly to the Explore Menu section
   const handleScrollToMenu = () => {
-    const menuSection = document.getElementById('explore-menu');
+    const menuSection = document.getElementById('explore-menu'); // Get the element with ID 'explore-menu'
+    
     if (menuSection) {
-      menuSection.scrollIntoView({ behavior: 'smooth' });
+      menuSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the element smoothly
     }
   };
+
 
   return (
     <div className='header'>

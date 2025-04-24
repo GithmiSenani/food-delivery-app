@@ -38,6 +38,7 @@
 .footer-social-icons img{
     width: 40px; /* Standard icon size */
     margin-right: 15px; /* Space between social icons */
+    cursor: pointer;
 }
 
 .footer hr{

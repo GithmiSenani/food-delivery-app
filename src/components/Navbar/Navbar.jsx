@@ -10,7 +10,9 @@ const Navbar = ({setShowLogin}) => {
     // State to track the active menu item
     const [menu, setMenu] = useState("home");
 
-    const{getTotalCartAmount}=useContext(StoreContext)
+    const{getTotalCartAmount}=useContext(StoreContext);
+
+    
 
   return (
     <div className='navbar'> {/* Navbar container */}
@@ -19,8 +21,38 @@ const Navbar = ({setShowLogin}) => {
         {/* Navigation menu */}
         <ul className="navbar-menu">
             <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
-            <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</a>
-            <a href='#app-download' onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>mobile-app</a>
+            <Link
+  to="/"
+  onClick={() => {
+    setMenu("menu");
+    setTimeout(() => {
+      const el = document.getElementById("explore-menu");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // wait a bit so page can render
+  }}
+  className={menu === "menu" ? "active" : ""}
+>
+  menu
+</Link>
+
+<Link
+  to="/"
+  onClick={() => {
+    setMenu("mobile-app");
+    setTimeout(() => {
+      const el = document.getElementById("app-download");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  }}
+  className={menu === "mobile-app" ? "active" : ""}
+>
+  mobile-app
+</Link>
+
             <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
         </ul>
 
