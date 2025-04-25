@@ -126,7 +126,20 @@
     background-color: grey; /* Change to a lighter color on hover (you can customize) */
   }
   
-
+  .delete-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+  }
+  
+  
+  .delete-icon:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(93%) saturate(3392%) hue-rotate(356deg) brightness(97%) contrast(103%);
+    transform: scale(1.2);
+  }
+  
 /* Responsive design: Adjust layout for smaller screens */
 @media (max-width:750px) {
     /* Change cart layout to column for small screens */

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import deleteIcon from "../../assets/icons8-delete-100.png";
 
 const Cart = () => {
   // Accessing cart data and functions from StoreContext
@@ -39,9 +40,12 @@ const Cart = () => {
                   <p>{cartItems[item._id]}</p> {/* Quantity of Item */}
                   <p>${item.price * cartItems[item._id]}</p>{" "}
                   {/* Total Price for Item */}
-                  <p onClick={() => removeFromCart(item._id)} className="cross">
-                    x
-                  </p>{" "}
+                  <img
+                    src={deleteIcon}
+                    alt="Delete"
+                    className="delete-icon"
+                    onClick={() => removeFromCart(item._id)}
+                  />
                   {/* Remove Item */}
                 </div>
                 <hr />
