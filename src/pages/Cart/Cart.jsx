@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   // Accessing cart data and functions from StoreContext
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
 
   const navigate = useNavigate();
 
@@ -75,9 +76,26 @@ const Cart = () => {
               {/* Total Amount (Subtotal + Delivery) */}
             </div>
           </div>
-          <button onClick={() => navigate("/order")}>
+          <button
+            disabled={getTotalCartAmount() === 0}
+            onClick={() => {
+              if (getTotalCartAmount() > 0) {
+                navigate("/order");
+              }
+            }}
+            style={{
+              backgroundColor: getTotalCartAmount() === 0 ? "#ccc" : "#ff6347",
+              cursor: getTotalCartAmount() === 0 ? "not-allowed" : "pointer",
+            }}
+          >
             PROCEED TO CHECKOUT
-          </button>{" "}
+          </button>
+          {getTotalCartAmount() === 0 && (
+            <p style={{ color: "red", marginTop: "10px" }}>
+              Your cart is empty. Add items to proceed.
+            </p>
+          )}
+
           {/* Checkout Button */}
         </div>
 
